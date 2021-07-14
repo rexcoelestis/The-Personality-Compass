@@ -40,7 +40,7 @@ while ready == False:
         print(description)
 
 for question in questions:
-    if leave == True
+    if leave == True:
         exit()
     questions_seen += 1
     if questions_seen > 30:
