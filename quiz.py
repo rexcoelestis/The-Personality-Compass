@@ -1,5 +1,6 @@
 from questions import questions
 from types import types
+from types import type_descr
 import numpy
 
 answers = []
