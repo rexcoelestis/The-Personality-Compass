@@ -1,4 +1,5 @@
 from questions import questions
+from types import types
 import numpy
 
 answers = []
@@ -53,29 +54,30 @@ while leave == false:
             else:
                 answers.append(answer)
 
-print("Thank you for your answers!  ")
-print("Please wait while we calculate your result...  ")
+    print("Thank you for your answers!  ")
+    print("Please wait while we calculate your result...  ")
 
-acount = calculate_As(answers)
-bcount = calculate_Bs(answers)
-ccount = calculate_Cs(answers)
-dcount = calculate_Ds(answers)
+    acount = calculate_As(answers)
+    bcount = calculate_Bs(answers)
+    ccount = calculate_Cs(answers)
+    dcount = calculate_Ds(answers)
 
-if acount >= bcount:
-    ns_type = "A"
-else
-    ns_type = "B"
+    if acount >= bcount:
+        ns_type = "A"
+    else
+        ns_type = "B"
 
-if ccount >= dcount:
-    ew_type = "C"
-else
-    ew_type = "D"
+    if ccount >= dcount:
+        ew_type = "C"
+    else
+        ew_type = "D"
 
-p_type_key = ns_type + ew_type
-personality_type =
-type_description = 
+    p_type_key = ns_type + ew_type
+    personality_type = types.get(p_type_key)
+    type_description = type_descr.get(p_type_key)
 
-print("Your personality type is {}.".format(personality_type))
-print(type_description)
-print("Thank you for participating!  Have a good one!")
+    print("Your personality type is {}.".format(personality_type))
+    print(type_description)
+    print("Thank you for participating!  Have a good one!")
+    leave == true
 exit()
