@@ -1,13 +1,13 @@
-types = {
+p_types = {
     "AD": "North West",
     "AC": "North East",
     "BD": "South West",
-    "BC": "South East",
+    "BC": "South East"
 }
 
-type_descr = {
+p_type_descr = {
     "AD": "Description",
     "AC": "Description",
     "BD": "Description",
-    "BC": "Description",
+    "BC": "Description"
 }
