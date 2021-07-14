@@ -50,10 +50,10 @@ while leave == false:
             answer = answer.lower()
             if answer != "a" or answer != "b" or answer != "c" or answer != "d":
                 raise ValueError("Did not choose 'a', 'b', 'c', or 'd'. ")
-            except ValueError as err:
+        except ValueError as err:
                 print("Please be sure to select either {}".format(question_set))
-            else:
-                answers.append(answer)
+        else:
+            answers.append(answer)
 
     print("Thank you for your answers!  ")
     print("Please wait while we calculate your result...  ")
