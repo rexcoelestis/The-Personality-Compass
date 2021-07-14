@@ -4,6 +4,7 @@ import numpy
 
 answers = []
 questions_seen = 0
+questions_remaining = 60
 name = "Friend"
 ready = False
 description = "\nThe description will be here."
@@ -41,6 +42,8 @@ while ready == False:
     elif step1 == "D":
         print(description)
 
+print("\nExcellent!  Let's get started!!  \n(You may select 'q' at anytime to exit)")
+
 for question in questions:
     if leave == True:
         exit()
@@ -49,6 +52,7 @@ for question in questions:
         question_set = "'c' or 'd'. You can always also choose 'q' to quit.  "
         opt1 = "c"
         opt2 = "d"
+    print("\nQUESTION {} ({} remaining):".format(questions_seen, questions_remaining))
     answer = input(question)
     try:
         answer = answer.lower()
@@ -61,6 +65,7 @@ for question in questions:
             leave = True
         else:
             answers.append(answer)
+            questions_remaining -= 1
 
 print("Thank you for your answers!  \n")
 print("Please wait while we calculate your result...  \n")
@@ -87,8 +92,8 @@ p_type_key = ns_type + ew_type
 personality_type = p_types.get(p_type_key)
 type_description = p_type_descr.get(p_type_key)
 
-print("Your personality type is {}. \n".format(personality_type))
+print("\nYour personality type is {}. \n".format(personality_type))
 print(type_description)
-print("Thank you for participating!  Have a good one!")
+print("\nThank you for participating!  Have a good one!")
 
 exit()
