@@ -6,8 +6,8 @@ answers = []
 questions_seen = 0
 name = "Friend"
 ready = False
-description = "The description will be here. \n\n"
-instructions = "The instructions will be here.\n\n"
+description = "\nThe description will be here."
+instructions = "\nThe instructions will be here."
 leave = False
 question_set = "'a' or 'b'.  "
 
@@ -23,12 +23,12 @@ def calculate_Cs(list):
 def calculate_Ds(list):
     return list.count("d")
 
-print("Welcome to The Personality Compass \n Python Edition \n\n {} \n\n {}  ".format(description, instructions))
+print("\nWelcome to The Personality Compass \n Python Edition \n {} \n {}  ".format(description, instructions))
 
-name = input("What is your name?  \n")
+name = input("\nWhat is your name?  \n\n")
 
 while ready == False:
-    step1 = input("Hello {}, What would you like to do? \nJust type: \n D - to read the description of the quiz again. \n I - to read the instructions again. \n B - to begin the quiz. \n Q - to exit the quiz. \n\n".format(name))
+    step1 = input("\nHello {}, What would you like to do? \nJust type: \n D - to read the description of the quiz again. \n I - to read the instructions again. \n B - to begin the quiz. \n Q - to exit the quiz. \n\n".format(name))
     if step1 == "B":
         ready = True
     elif step1 == "Q":
@@ -40,18 +40,27 @@ while ready == False:
         print(description)
 
 for question in questions:
+    if leave == True
+        exit()
     questions_seen += 1
     if questions_seen > 30:
-        question_set = "'c' or 'd'.  "
+        question_set = "'c' or 'd'. You can always also choose 'q' to quit.  "
     answer = input(question)
     try:
         answer = answer.lower()
-        if answer != "a" or answer != "b" or answer != "c" or answer != "d":
-            raise ValueError("Did not choose 'a', 'b', 'c', or 'd'. ")
+        if questions_seen <= 30:
+            if answer != "a" or answer != "b" or answer != "q":
+                raise ValueError("Did not choose {} ".format(question_set))
+        else:
+            if answer != "a" or answer != "b" or answer != "q":
+                raise ValueError("Did not choose {} ".format(question_set))
     except ValueError as err:
-        print("Please be sure to select either {}".format(question_set))
+        print("Please be sure to select the correct option.  Error: {}".format(err))
     else:
-        answers.append(answer)
+        if answer == "q":
+            exit
+        else:
+            answers.append(answer)
 
 print("Thank you for your answers!  ")
 print("Please wait while we calculate your result...  ")
