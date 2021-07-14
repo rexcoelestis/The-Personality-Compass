@@ -65,12 +65,12 @@ while leave == false:
 
     if acount >= bcount:
         ns_type = "A"
-    else
+    else:
         ns_type = "B"
 
     if ccount >= dcount:
         ew_type = "C"
-    else
+    else:
         ew_type = "D"
 
     p_type_key = ns_type + ew_type
