@@ -53,18 +53,14 @@ for question in questions:
         opt2 = "d"
     print("\nQUESTION {} ({} remaining):".format(questions_seen, questions_remaining))
     answer = input(question)
-    try:
-        answer = answer.lower()
-        while answer not in {opt1, opt2, "q"}:
-            raise ValueError("Did not choose {} ".format(question_set))
-    except ValueError as err:
-        print("Please be sure to select the correct option.  Error: {}".format(err))
+    while answer.lower() not in {opt1, opt2, "q"}:
+        print("\nERROR: Please be sure to select the correct option.\nPlease choose either {}\n".format(question_set))
+        answer = input(question)
+    if answer == "q":
+        leave = True
     else:
-        if answer == "q":
-            leave = True
-        else:
-            answers.append(answer)
-            questions_remaining -= 1
+        answers.append(answer)
+        questions_remaining -= 1
 
 print("Thank you for your answers!  \n")
 print("Please wait while we calculate your result...  \n")
@@ -91,7 +87,7 @@ p_type_key = ns_type + ew_type
 personality_type = p_types.get(p_type_key)
 type_description = p_type_descr.get(p_type_key)
 
-print("\nYour personality type is {}. \n".format(personality_type))
+print("\nYour personality type is {}.".format(personality_type))
 print(type_description)
 print("\nFor more information about your type and what it means to you, please check out 'The Personality Compass: A New Way to Understand People' by Diane Turner & Thelma Greco.")
 print("\nThank you for participating!  Have a good one!")
