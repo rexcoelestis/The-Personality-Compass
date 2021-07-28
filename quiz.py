@@ -7,8 +7,8 @@ questions_seen = 0
 questions_remaining = 60
 name = "Friend"
 ready = False
-description = "\nThe description will be here."
-instructions = "\nThe instructions will be here."
+description = "\nThe Personality Compass is a ground-breaking exploration of the main personality types which form the basis of societies the world over.  Tried and tested with astonishingly accurate results.  The Personality Compass shows how these differed temperaments correspond with the governing points of the compass, sharing the special characteristics that are assosciated with each direction."
+instructions = "\nQUICK TEST FOR TYPE\n\nThis is an adaptation of Turner and Greco's Quick-Test for Type.  You will be presented with 60 pairs of words.  For each pair, read the choices and choose the word that describes you more often than the other (even though you may have both characteristics).  For the first 30 pairs you will make your selection by choosing either 'a' or 'b'.  For the second group of 30 pairs, you must make your selection by choosing either 'c' or 'd'.  You may also select 'q' at anytime to exit the program."
 leave = False
 question_set = "'a' or 'b'.  You can always also choose 'q' to quit.  "
 opt1 = "a"
@@ -26,20 +26,19 @@ def calculate_Cs(list):
 def calculate_Ds(list):
     return list.count("d")
 
-print("\nWelcome to The Personality Compass \n Python Edition \n {} \n {}  ".format(description, instructions))
+print("\nWelcome to The Personality Compass \nPython Edition \n {} \n {}  ".format(description, instructions))
 
 name = input("\nWhat is your name?  \n\n")
 
 while ready == False:
     step1 = input("\nHello {}, What would you like to do? \nJust type: \n D - to read the description of the quiz again. \n I - to read the instructions again. \n B - to begin the quiz. \n Q - to exit the quiz. \n\n".format(name))
-    if step1 == "B":
+    if step1.lower() == "b":
         ready = True
-    elif step1 == "Q":
-        leave = True
-        break
-    elif step1 == "I":
+    elif step1.lower() == "q":
+        exit()
+    elif step1.lower() == "i":
         print(instructions)
-    elif step1 == "D":
+    elif step1.lower() == "d":
         print(description)
 
 print("\nExcellent!  Let's get started!!  \n(You may select 'q' at anytime to exit)")
@@ -94,6 +93,7 @@ type_description = p_type_descr.get(p_type_key)
 
 print("\nYour personality type is {}. \n".format(personality_type))
 print(type_description)
+print("\nFor more information about your type and what it means to you, please check out 'The Personality Compass: A New Way to Understand People' by Diane Turner & Thelma Greco.")
 print("\nThank you for participating!  Have a good one!")
 
 exit()

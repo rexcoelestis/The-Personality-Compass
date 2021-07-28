@@ -6,8 +6,8 @@ p_types = {
 }
 
 p_type_descr = {
-    "AD": "Description",
-    "AC": "Description",
-    "BD": "Description",
-    "BC": "Description"
+    "AD": "\nAssertive, Decisive, Flexible, Creative, Adventurous.",
+    "AC": "\nAssertive, Decisive, Structured, Detailed, Organized.",
+    "BD": "\nFriendly, Caring, Flexible, Creative, Adventurous.",
+    "BC": "\nFriendly, Caring, Structured, Detailed, Organized."
 }
