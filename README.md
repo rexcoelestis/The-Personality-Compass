@@ -52,6 +52,7 @@ If you have any questions, email [rexcoelestis@icloud.com](mailto:rexcoelestis@i
 ## Author
 
 **Rex Mann**
+
 *[rexcoelestis@icloud.com](mailto:rexcoelestis@icloud.com)*
 
 ## Version History
