@@ -41,7 +41,7 @@ pip install -r requirements.txt
 
 * Run quiz.py and follow the on-screen instructions.
 
-```
+```python
 python quiz.py
 ```
 
@@ -51,13 +51,13 @@ If you have any questions, email [rexcoelestis@icloud.com](mailto:rexcoelestis@i
 
 ## Author
 
-ex. Rex Mann
-ex. [rexcoelestis@icloud.com](mailto:rexcoelestis@icloud.com)
+**Rex Mann**
+*[rexcoelestis@icloud.com](mailto:rexcoelestis@icloud.com)*
 
 ## Version History
 
 * 0.1
- * Initial Release
+  * Initial Release
 
 ## License
 
